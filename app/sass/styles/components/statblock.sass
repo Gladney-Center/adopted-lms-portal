@@ -1,0 +1,53 @@
+adpt-stat-block
+	padding: 3em 0
+
+	h2
+		padding: .5em
+		text-align: center
+		color: $navy
+
+	adpt-stats-grid
+		display: grid
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+		grid-row-gap: 1em
+		padding: 1em 0
+
+		adpt-stats-cell
+			border-radius: $tiny
+			overflow: hidden
+			padding: 1.5em
+			text-align: center
+			font-size: 90%
+
+			&:nth-child(2n+1)
+				background-color: teal()
+
+			.statNum
+				display: block
+				padding: 1em 0
+
+				h4
+					font-size: 200%
+
++MQ($mq-mobile)
+	.adpt-stat-block
+
+		adpt-inner
+			padding: 0
+
+			adpt-stat-block
+				padding-left: 0
+				padding-right: 0
+
+				adpt-stats-grid
+					grid-template-columns: 1fr
+
+					adpt-stats-cell
+						border-radius: 0
+						display: flex
+						align-items: center
+						font-size: 80%
+
+						.statText
+							display: block
+							padding-left: 1em

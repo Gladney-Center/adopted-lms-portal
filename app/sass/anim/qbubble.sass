@@ -1,0 +1,166 @@
+@mixin qbcxlg
+	width: 300px
+	height: auto
+	max-width: 300px
+
+	+MQ($mq-tablet)
+		width: 150px
+		height: auto
+		max-width: 150px
+
+@mixin qbclrg
+	width: 225px
+	height: auto
+	max-width: 225px
+
+@mixin qbcmed
+	width: 188px
+	height: auto
+	max-width: 188px
+
+@mixin qbcsml
+	width: 150px
+	height: auto
+	max-width: 150px
+
+.qbubble
+	display: block
+	transform: scale(0)
+
+	&.left
+		transform-origin: left bottom
+
+	&.right
+		transform-origin: right bottom
+
+	.qbubble-shape
+		@extend .white-fill
+
+	.qmark
+		@extend .periwinkle-fill
+
+.qbubble-container
+	position: absolute
+	+material-depth
+
+	&.qb-aa
+		top: $huge
+		right: $huge + 1em
+		+qbcsml
+
+		.qbubble
+			animation-delay: #{random(1500) - random(500)}ms !important
+
+		.qmark
+			animation-delay: #{random(1500) + 2000}ms !important
+	
+	&.qb-ab
+		top: $huge
+		right: 200px + $blockEM*3
+		+qbcmed
+
+		.qbubble
+			animation-delay: #{random(1500) - random(500)}ms !important
+		
+		.qmark
+			animation-delay: #{random(1500) + 2000}ms !important
+	
+	&.qb-ac
+		top: calc(#{$huge} + 100px)
+		left: calc((#{$bodyw} - 60px) / 2)
+		+qbclrg
+
+		.qbubble
+			animation-delay: #{random(1500) - random(500)}ms !important
+		
+		.qmark
+			animation-delay: #{random(1500) + 2000}ms !important
+
+	&.qb-ad
+		top: calc(#{$huge} + 150px)
+		right: $huge
+		+qbcsml
+
+		.qbubble
+			animation-delay: #{random(1500) - random(500)}ms !important
+
+		.qmark
+			animation-delay: #{random(1500) + 2000}ms !important
+
+	&.qb-ae
+		top: calc(#{$huge} + 270px)
+		left: calc(#{$huge} + 400px)
+		+qbcsml
+
+		.qbubble
+			animation-delay: #{random(1500) - random(500)}ms !important
+
+		.qmark
+			animation-delay: #{random(1500) + 2000}ms !important
+
+	&.qb-af
+		top: calc(#{$huge} + 200px)
+		right: calc(#{$huge} + 170px)
+		+qbcmed
+
+		.qbubble
+			animation-delay: #{random(1500) - random(500)}ms !important
+
+		.qmark
+			animation-delay: #{random(1500) + 2000}ms !important
+
+	&.qb-ag
+		top: calc(#{$huge} + 425px)
+		left: calc(#{$huge} + 250px)
+		+qbclrg
+
+		.qbubble
+			animation-delay: #{random(1500) - random(500)}ms !important
+
+		.qmark
+			animation-delay: #{random(1500) + 2000}ms !important
+	
+	&.qb-ah
+		bottom: $huge
+		left: calc(#{$huge} + 600px)
+		+qbcxlg
+
+		.qbubble
+			animation-delay: #{random(1500) - random(500)}ms !important
+
+		.qmark
+			animation-delay: #{random(1500) + 2000}ms !important
+
+	&.qb-ai
+		top: calc(#{$huge} + 250px)
+		left: $huge * 3
+		+qbcmed
+
+		.qbubble
+			animation-delay: #{random(1500) - random(500)}ms !important
+
+		.qmark
+			animation-delay: #{random(1500) + 2000}ms !important
+
+	&.qb-aj
+		bottom: calc(#{$huge} + 1em)
+		left: $huge
+		+qbcsml
+
+		.qbubble
+			animation-delay: #{random(1500) - random(500)}ms !important
+
+		.qmark
+			animation-delay: #{random(1500) + 2000}ms !important
+
++MQ($mq-tablet)
+	.qbubble-container
+
+		&.qb-ah
+			display: none
+
++MQ($mq-tportrait)
+	.qbubble-container
+
+		&[class*="qb-"]:not(.qb-aa)
+			display: none

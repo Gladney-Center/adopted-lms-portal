@@ -1,0 +1,154 @@
+.adpt-footer
+	position: relative
+	background-color: $sunrise
+	+full-width-gutter
+
+	adpt-inner
+		display: flex
+		padding: 1em
+		max-width: 1700px
+
+		&#addenda
+			align-items: center
+			justify-content: center
+			text-align: center
+
+			adpt-social-icons
+				font-size: $bodytext
+				text-align: center
+				justify-content: center
+
+			.adpt-footer-apps
+				padding-top: 1em
+				display: flex
+				align-items: center
+				justify-content: center
+
+				& > span
+					font-weight: bold
+					font-size: .75rem
+					text-transform: uppercase
+					display: block
+					padding-right: 1em
+
+				.adpt-app-link
+					font-size: 1rem
+
+					&:not(:last-of-type)
+						padding-right: .5em
+
+	.adpt-footer-block
+		flex: 1
+		padding: $huge 1em 0
+
+		.adpt-footer-block-inner
+			font-size: $intsize
+
+			i
+				margin-right: .5em
+
+			address
+				display: inline
+
+			h4
+
+				a
+					text-decoration: none
+					transition: all 100ms ease-in-out
+					
+					&:hover
+						text-decoration: underline
+
+				i
+					margin-left: .5em
+
+			.adpt-footer-heading
+				height: $blockEM
+				width: 100%
+
+			.adpt-footer-info
+				padding: 1em 0
+
+				.footer-info-inner
+					display: block
+					padding-bottom: $teeny
+			
+			input
+				max-width: 80%
+				width: 100%
+
+			button, a.button, a.btn
+				font-size: $intsize
+				display: inline-block
+				padding: $teeny 1em
+
+				&:not(:last-of-type)
+					margin-right: $teeny
+
+				i.fas
+					font-size: $bodytext
+					margin-right: $teeny
+
+		&.block-1
+
+			svg
+				height: 100%
+				fill: white()
+
+		&.block-2
+
+			p
+				padding-top: .75em
+
+				a
+					opacity: .8
+					text-decoration: underline
+					transition: all 100ms ease-in-out
+
+					&:hover
+						opacity: 1
+				
+				&:last-of-type
+					padding-bottom: 1.5em
+
+		&.block-3
+			
+			.adpt-footer-info
+
+				.footer-info-inner
+					padding-bottom: 1em
+
+		&.block-4
+
+			.gcfa-logo
+				width: 100%
+				max-width: 400px
+				padding: $huge 0
+
+				svg
+					fill: white()
+
++MQ($mq-tablet)
+	.adpt-footer
+
+		adpt-inner
+			padding: 0
+
+			.adpt-footer-block
+
+				&.block-1
+					padding-left: 0
+
+				&.block-4
+					padding-right: 0
+
++MQ($mq-tportrait)
+	.adpt-footer
+		padding: 0 1em
+		
+		adpt-inner
+			display: block
+			padding-top: 1em
+		
+			.adpt-footer-block
+				padding: .5em 0

@@ -1,0 +1,232 @@
+#__next.adpt-educators
+
+    nav.adpt-menu
+
+        .educators > a
+            +menuactive
+
+main.adpt-educators
+
+    section:not(:last-of-type)
+        margin-bottom: 1em
+    
+    adpt-stage
+        background-color: $rose
+
+        adpt-columns
+            display: grid
+            grid-template-columns: repeat(2,1fr)
+            grid-gap: $huge*2
+            align-items: center
+            padding-bottom: $headerh
+
+            adpt-column
+
+                &.adpt-educator-anim
+                    padding-top: $huge*2
+                    padding-left: $huge
+
+                    svg
+                        height: 100%
+                        width: 100%
+                        +material-depth
+
+                &.adpt-edu-headline
+                    display: flex
+                    align-items: center
+
+    .adpt-fold
+
+        adpt-inner
+
+            adpt-columns
+                display: grid
+                grid-template-columns: repeat(2,1fr)
+                grid-gap: $huge*2
+
+                adpt-column
+
+                    h2
+                        font-size: 150%
+                        line-height: 125%
+                        color: $sunrise
+                    
+                    &.fold-text
+
+                        p
+                            font-size: $intsize
+                            line-height: 125%
+                            margin-bottom: 0
+
+    .adpt-perks-grid
+
+        adpt-inner
+            padding: $huge*2
+
+            h3
+                color: navy()
+                font-family: $font-stack
+                font-size: $intsize
+                padding-right: $huge
+
+            & > div
+                display: grid
+                grid-template-columns: repeat(2,1fr)
+                grid-gap: $huge*2
+                padding: $huge*2
+
+                svg
+                    display: block
+                    max-width: $huge*1.5
+                    padding-bottom: 1em
+                
+                h4
+                    padding-bottom: 1em
+
+    .adpt-perks-panels
+        display: flex
+        color: white()
+
+        & > article
+            position: relative
+            width: 50%
+            text-align: center
+            background-attachment: fixed
+            background-origin: center
+            background-size: 60%
+            padding: 6em 4em
+
+            &:first-child
+                background-color: navy()
+                background-image: url('/static/img/geo1-01.png')
+
+            &:last-child
+                background-color: periwinkle()
+                background-image: url('/static/img/geo2-01.png')
+
+            h3
+                color: white()
+                padding-bottom: 1em
+
+            span
+                line-height: 110%
+
+    .adpt-section-headline
+        text-align: center
+        padding: $huge * 2
+        margin-bottom: 1em
+
+        h3
+            color: $navy
+
+        p
+            max-width: 750px
+            display: inline-block
+            margin-top: 1em
+
+    .adpt-educ-faq
+        background-color: $rose
+        padding: 2em 8% 0
+        overflow: hidden
+
+        adpt-inner
+            background-size: contain
+            background-image: url('/static/img/paper.png')
+            +material-depth
+
++MQ($mq-tportrait)
+    main.adpt-educators
+
+        adpt-stage
+            
+            adpt-inner
+                
+                adpt-columns
+                    grid-gap: $huge
+
+                    adpt-column
+                        
+                        &.adpt-edu-headline
+                            padding-right: 1em
+                            
+                        &.adpt-educator-anim
+                            padding-left: 1em
+        
+        .adpt-perks-panels
+            display: block
+
+            & > article
+                width: 100%
+
+        .adpt-perks-grid
+
+            adpt-inner
+                padding: $huge
+
+                article
+                    padding: 1em 0
+
+                h3
+                    color: navy()
+                    font-family: $font-stack
+                    font-size: $intsize
+                    padding-right: $huge
+
+                & > div
+                    display: block
+                    padding: 0
+
++MQ($mq-mobile)
+	main.adpt-educators
+        
+        .adpt-fold
+
+            adpt-inner
+
+                adpt-columns
+                    grid-template-columns: 1fr
+                    grid-template-rows: repeat(2,1fr)
+                    grid-gap: $huge
+
+        adpt-stage
+            
+            adpt-inner
+                
+                adpt-columns
+                    grid-template-columns: 1fr
+                    grid-template-rows: repeat(2, 1fr)
+                    grid-gap: 0
+                    
+                    adpt-column
+                        margin: 0 !important
+                        
+                        &.adpt-edu-headline
+                            padding-top: 1em
+                            order: 1
+                            
+                        &.adpt-educator-anim
+                            padding: 0 .5em 0
+                            order: 2
+                            
+                        h1
+                            font-size: 40px
+                            padding: 0 1em
+
+        .adpt-perks-panels
+
+            & > article
+                padding: 2em 1em
+                background-size: 85%
+
+                & > div
+                    display: block
+
+                    span
+                        font-size: $intsize
+                        line-height: 100%
+
+        .adpt-section-headline
+            padding: 2em
+        
+        .adpt-educ-faq
+            padding: 1em 1em 0

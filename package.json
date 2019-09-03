@@ -1,0 +1,45 @@
+{
+  "name": "adopted-portal",
+  "version": "1.0.0",
+  "description": "AdoptED Phase 2 Learning Management System",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://enlightenedpie@bitbucket.org/gladneyit/adopted-phase-2-lms.git"
+  },
+  "author": "David Crouch <david.crouch@gladney.org>",
+  "license": "MIT",
+  "scripts": {
+    "next:dev": "yarn install && next ./app -- -p 1112",
+    "next:start": "yarn install && next start ./app -p 1112",
+    "next:deploy": "yarn next:build && firebase deploy",
+    "next:build": "yarn install && cpx \"app/static/**/*.*\" public/static && next build ./app && cd \"functions\" && yarn",
+    "next:serve": "yarn next:build && firebase serve",
+    "test": "echo \"The current version is $npm_package_version\"",
+    "version": "yarn next:deploy",
+    "postversion": "git add -A && git commit -a && git push",
+    "up:patch": "npm version patch --no-git-tag-version",
+    "up:minor": "npm version minor --no-git-tag-version",
+    "up:major": "npm version major --no-git-tag-version"
+  },
+  "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
+    "core-js": "3.1.4",
+    "express": "^4.17.1",
+    "firebase": "^6.2.4",
+    "firebase-admin": "^8.0.0",
+    "firebase-functions": "^3.0.0",
+    "firebase-tools": "^7.2.2",
+    "fs": "^0.0.1-security",
+    "next": "^9.0.0",
+    "next-compose-plugins": "^2.2.0",
+    "node-sass": "^4.12.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.1"
+  },
+  "devDependencies": {
+    "cpx": "^1.5.0",
+    "rimraf": "^2.6.3"
+  }
+}

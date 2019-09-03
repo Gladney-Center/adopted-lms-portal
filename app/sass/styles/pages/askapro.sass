@@ -1,0 +1,76 @@
+#__next.adpt-askapro
+
+    nav.adpt-menu
+
+        .askapro > a
+            +menuactive
+
+main.adpt-askapro
+
+    adpt-stage
+        background-color: $teal
+        padding-bottom: 3em
+
+        adpt-qblock
+            
+            adpt-qblock-content
+                
+                adpt-qblock-content-inner
+                    
+                    aside
+                        color: black
+
+    .adpt-fold
+        text-align: center
+
+        adpt-inner
+
+            .adpt-fold-graybox
+                display: flex
+                justify-content: center
+
+                adpt-social-icons
+
+                    a
+                        +material-depth
+
+    .adpt-askapro-vids
+        padding: 2em 0
+
+        adpt-inner
+            display: grid
+            grid-template-columns: 25% 75%
+            grid-gap: $huge
+            align-items: center
+
+            aside
+
+                h4
+                    padding-bottom: 1em
+
+                a
+                    text-decoration: underline
+
+            & > div
+                position: relative
+                padding-top: 56.25%
+
+                iframe
+                    position: absolute
+                    width: 100%
+                    height: 100%
+                    top: 0
+                    bottom: 0
+                    left: 0
+                    right: 0
+
++MQ($mq-mobile)
+    main.adpt-askapro
+
+        .adpt-askapro-vids
+            
+            adpt-inner
+                display: block
+
+                aside
+                    padding: 1em

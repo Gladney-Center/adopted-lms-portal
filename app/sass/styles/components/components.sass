@@ -1,0 +1,25 @@
+adpt-stage, adpt-inner, adpt-columns, adpt-column, adpt-contact, adpt-contact-form, adpt-post-footer, adpt-team-bio, adpt-parallax-content, adpt-parallax-bg, adpt-qblock, adpt-qbubble-overlay, adpt-qblock-content, adpt-qblock-content-inner, adpt-faq, adpt-refer-a-friend, adpt-student-askapro, adpt-stat-block, adpt-stat-grid, adpt-stat-block, adpt-stat-cell
+    +custom-block-element
+    @extend div
+    
+adpt-inner, adpt-columns, adpt-column
+    height: 100%
+
+adpt-inner
+    position: relative
+    +body-max-width
+
+adpt-columns
+    display: flex
+    flex-flow: row nowrap
+
+adpt-column
+    flex: 1 1 auto
+    min-height: $huge*2
+
+    &.adpt-column-collapse
+        flex: initial
+
+adpt-post-footer
+    height: $huge
+    background-color: aecolor(#cb733a)
