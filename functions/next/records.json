@@ -1,0 +1,92 @@
+{
+  "mini-css-extract-plugin ../node_modules/css-loader/index.js??ref--6-1!../node_modules/sass-loader/lib/loader.js??ref--6-2!sass/adopted.sass": [
+    {
+      "modules": {
+        "byIdentifier": {},
+        "usedIds": {}
+      },
+      "chunks": {
+        "byName": {
+          "mini-css-extract-plugin": 0
+        },
+        "bySource": {},
+        "usedIds": [
+          0
+        ]
+      }
+    }
+  ],
+  "mini-css-extract-plugin ../node_modules/css-loader/index.js??ref--6-1!../node_modules/sass-loader/lib/loader.js??ref--6-2!sass/portal.sass": [
+    {
+      "modules": {
+        "byIdentifier": {},
+        "usedIds": {}
+      },
+      "chunks": {
+        "byName": {
+          "mini-css-extract-plugin": 0
+        },
+        "bySource": {},
+        "usedIds": [
+          0
+        ]
+      }
+    }
+  ],
+  "mini-css-extract-plugin ../node_modules/css-loader/index.js??ref--6-1!../node_modules/sass-loader/lib/loader.js??ref--6-2!components/Portal/Actions/index.sass": [
+    {
+      "modules": {
+        "byIdentifier": {},
+        "usedIds": {}
+      },
+      "chunks": {
+        "byName": {
+          "mini-css-extract-plugin": 0
+        },
+        "bySource": {},
+        "usedIds": [
+          0
+        ]
+      }
+    }
+  ],
+  "modules": {
+    "byIdentifier": {
+      "css ../node_modules/css-loader/index.js??ref--6-1!../node_modules/sass-loader/lib/loader.js??ref--6-2!components/Portal/Actions/index.sass 0": 0,
+      "css ../node_modules/css-loader/index.js??ref--6-1!../node_modules/sass-loader/lib/loader.js??ref--6-2!sass/portal.sass 0": 1,
+      "css ../node_modules/css-loader/index.js??ref--6-1!../node_modules/sass-loader/lib/loader.js??ref--6-2!sass/adopted.sass 0": 2
+    },
+    "usedIds": {
+      "0": 0,
+      "1": 1,
+      "2": 2
+    }
+  },
+  "chunks": {
+    "byName": {
+      "commons": 0,
+      "static/runtime/webpack.js": 1,
+      "static/2EIvuwzyEG6uzQPIgNnb2/pages/[route].js": 2,
+      "static/2EIvuwzyEG6uzQPIgNnb2/pages/_app.js": 3,
+      "static/2EIvuwzyEG6uzQPIgNnb2/pages/_error.js": 4,
+      "static/2EIvuwzyEG6uzQPIgNnb2/pages/index.js": 5,
+      "static/runtime/main.js": 6,
+      "styles": 7,
+      "static/IqK_htATF0qqfwhXbb7AW/pages/[route].js": 8,
+      "static/IqK_htATF0qqfwhXbb7AW/pages/_app.js": 9,
+      "static/IqK_htATF0qqfwhXbb7AW/pages/_error.js": 10,
+      "static/IqK_htATF0qqfwhXbb7AW/pages/index.js": 11
+    },
+    "bySource": {},
+    "usedIds": [
+      0,
+      1,
+      10,
+      11,
+      6,
+      7,
+      8,
+      9
+    ]
+  }
+}

@@ -1,6 +1,6 @@
 {
   "name": "adopted-portal",
-  "version": "1.0.0",
+  "version": "0.0.3",
   "description": "AdoptED Phase 2 Learning Management System",
   "private": true,
   "repository": {
@@ -13,10 +13,9 @@
     "next:dev": "yarn install && next ./app -- -p 1112",
     "next:start": "yarn install && next start ./app -p 1112",
     "next:deploy": "yarn next:build && firebase deploy",
-    "next:build": "yarn install && cpx \"app/static/**/*.*\" public/static && next build ./app && cd \"functions\" && yarn",
+    "next:build": "yarn install && cpx \"app/static/**/*.*\" portal/static && next build ./app && cd \"pFunctions\" && yarn",
     "next:serve": "yarn next:build && firebase serve",
     "test": "echo \"The current version is $npm_package_version\"",
-    "version": "yarn next:deploy",
     "postversion": "git add -A && git commit -a && git push",
     "up:patch": "npm version patch --no-git-tag-version",
     "up:minor": "npm version minor --no-git-tag-version",
