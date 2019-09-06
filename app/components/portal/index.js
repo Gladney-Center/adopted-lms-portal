@@ -8,13 +8,12 @@ import '../../sass/portal.sass'
 
 export default ({children}) => {
 	
-	const router = useRouter(),
-		settings = JSON.parse(window.localStorage.getItem('portalSettings') || '{"theme": "sunrise"}'),
+	const settings = JSON.parse(localStorage.getItem('portalSettings') || '{"theme": "sunrise"}'),
 		toggleMenu = () => document.body.classList.toggle('menu-open'),
 		toggleTheme = (color) => {
 			let theme = color || settings.theme
 			document.documentElement.className = theme ? theme+'-theme' : ''
-			window.localStorage.setItem('portalSettings', JSON.stringify(Object.assign(settings,{theme: theme})))
+			localStorage.setItem('portalSettings', JSON.stringify(Object.assign(settings,{theme: theme})))
 		}
 
 		toggleTheme()

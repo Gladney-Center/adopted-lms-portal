@@ -7,34 +7,8 @@ import PageContext from '../components/context'
 import '../sass/adopted.sass'
 
 export default class AdptApp extends App {
-    state = {
-        init: false
-    }
-
-    componentDidMount() {
-        this.itemsRef = fbapp.firestore().collection('/pages').onSnapshot((snapshot) => {
-            let obj = {}
-
-            snapshot.forEach((sn) => {
-                obj[sn.id] = sn.data()
-            })
-
-            this.setState({
-                init: true,
-                ...obj
-            })
-        })
-
-        window._wq = window._wq || []
-		_wq.push({ id: "_all", onReady: (video) => null})
-    }
-
-    componentWillUnmount() {
-        this.itemsRef()
-    }
 
     render() {
-        if (!this.state.init) return null
 
         const { Component, pageProps } = this.props
 
