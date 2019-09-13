@@ -2944,16 +2944,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/app */ "../node_modules/next/app.js");
 /* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_app__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _utilities_firebase__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utilities/firebase */ "./utilities/firebase.js");
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/head */ "next/head");
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _components_context__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/context */ "./components/context.js");
-/* harmony import */ var _sass_adopted_sass__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../sass/adopted.sass */ "./sass/adopted.sass");
-/* harmony import */ var _sass_adopted_sass__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_sass_adopted_sass__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/head */ "next/head");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _components_context__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/context */ "./components/context.js");
+/* harmony import */ var _sass_portal_sass__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../sass/portal.sass */ "./sass/portal.sass");
+/* harmony import */ var _sass_portal_sass__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_sass_portal_sass__WEBPACK_IMPORTED_MODULE_5__);
 
 var _jsxFileName = "/Users/sloth/Web/gladney/adopted-portal/app/pages/_app.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
-
 
 
 
@@ -2965,10 +2963,10 @@ class AdptApp extends next_app__WEBPACK_IMPORTED_MODULE_2___default.a {
       Component,
       pageProps
     } = this.props;
-    return __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, __jsx(next_head__WEBPACK_IMPORTED_MODULE_4___default.a, {
+    return __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, __jsx(next_head__WEBPACK_IMPORTED_MODULE_3___default.a, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 17
+        lineNumber: 16
       },
       __self: this
     }, __jsx("meta", {
@@ -2976,7 +2974,7 @@ class AdptApp extends next_app__WEBPACK_IMPORTED_MODULE_2___default.a {
       content: "IE=edge",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 18
+        lineNumber: 17
       },
       __self: this
     }), __jsx("meta", {
@@ -2984,7 +2982,7 @@ class AdptApp extends next_app__WEBPACK_IMPORTED_MODULE_2___default.a {
       content: "width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 19
+        lineNumber: 18
       },
       __self: this
     }), __jsx("meta", {
@@ -2992,21 +2990,21 @@ class AdptApp extends next_app__WEBPACK_IMPORTED_MODULE_2___default.a {
       content: "index,follow",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 20
+        lineNumber: 19
       },
       __self: this
     }), __jsx("title", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 21
+        lineNumber: 20
       },
       __self: this
-    }, process.env.BASE_TITLE), __jsx("link", {
+    }, process.env.BASE_TITLE || 'nada'), __jsx("link", {
       rel: "stylesheet",
       href: "https://use.typekit.net/zhc3hzf.css",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 22
+        lineNumber: 21
       },
       __self: this
     }), __jsx("link", {
@@ -3016,7 +3014,7 @@ class AdptApp extends next_app__WEBPACK_IMPORTED_MODULE_2___default.a {
       crossOrigin: "anonymous",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 23
+        lineNumber: 22
       },
       __self: this
     }), __jsx("link", {
@@ -3025,7 +3023,7 @@ class AdptApp extends next_app__WEBPACK_IMPORTED_MODULE_2___default.a {
       href: "../static/apple-touch-icon.png",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 24
+        lineNumber: 23
       },
       __self: this
     }), __jsx("link", {
@@ -3035,7 +3033,7 @@ class AdptApp extends next_app__WEBPACK_IMPORTED_MODULE_2___default.a {
       href: "../static/favicon-32x32.png",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 25
+        lineNumber: 24
       },
       __self: this
     }), __jsx("link", {
@@ -3045,7 +3043,7 @@ class AdptApp extends next_app__WEBPACK_IMPORTED_MODULE_2___default.a {
       href: "../static/favicon-16x16.png",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 26
+        lineNumber: 25
       },
       __self: this
     }), __jsx("link", {
@@ -3053,7 +3051,7 @@ class AdptApp extends next_app__WEBPACK_IMPORTED_MODULE_2___default.a {
       href: "../static/favicon.ico",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 27
+        lineNumber: 26
       },
       __self: this
     }), __jsx("link", {
@@ -3061,20 +3059,20 @@ class AdptApp extends next_app__WEBPACK_IMPORTED_MODULE_2___default.a {
       href: "../static/site.webmanifest",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 28
+        lineNumber: 27
       },
       __self: this
-    })), __jsx(_components_context__WEBPACK_IMPORTED_MODULE_5__["default"].Provider, {
+    })), __jsx(_components_context__WEBPACK_IMPORTED_MODULE_4__["default"].Provider, {
       value: this.state,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 30
+        lineNumber: 29
       },
       __self: this
     }, __jsx(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 31
+        lineNumber: 30
       },
       __self: this
     }))));
@@ -3084,45 +3082,14 @@ class AdptApp extends next_app__WEBPACK_IMPORTED_MODULE_2___default.a {
 
 /***/ }),
 
-/***/ "./sass/adopted.sass":
-/*!***************************!*\
-  !*** ./sass/adopted.sass ***!
-  \***************************/
+/***/ "./sass/portal.sass":
+/*!**************************!*\
+  !*** ./sass/portal.sass ***!
+  \**************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
 
-
-/***/ }),
-
-/***/ "./utilities/firebase.js":
-/*!*******************************!*\
-  !*** ./utilities/firebase.js ***!
-  \*******************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! firebase/app */ "firebase/app");
-/* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(firebase_app__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var firebase_auth__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! firebase/auth */ "firebase/auth");
-/* harmony import */ var firebase_auth__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(firebase_auth__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var firebase_firestore__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! firebase/firestore */ "firebase/firestore");
-/* harmony import */ var firebase_firestore__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(firebase_firestore__WEBPACK_IMPORTED_MODULE_2__);
-
-
-
-const config = {
-  apiKey: "AIzaSyCsU_llsXDATmPwVgoI2y2LHtD08xHaFm0",
-  authDomain: "adopted-lms-portal.firebaseapp.com",
-  databaseURL: "https://adopted-lms-portal.firebaseio.com",
-  projectId: "adopted-lms-portal",
-  storageBucket: "adopted-lms-portal.appspot.com",
-  messagingSenderId: "459954911917",
-  appId: "1:459954911917:web:c5bb5d6cf75ad71f76a424"
-};
-/* harmony default export */ __webpack_exports__["default"] = (!firebase_app__WEBPACK_IMPORTED_MODULE_0___default.a.apps.length ? firebase_app__WEBPACK_IMPORTED_MODULE_0___default.a.initializeApp(config) : firebase_app__WEBPACK_IMPORTED_MODULE_0___default.a.app());
 
 /***/ }),
 
@@ -3135,39 +3102,6 @@ const config = {
 
 module.exports = __webpack_require__(/*! private-next-pages/_app.js */"./pages/_app.js");
 
-
-/***/ }),
-
-/***/ "firebase/app":
-/*!*******************************!*\
-  !*** external "firebase/app" ***!
-  \*******************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("firebase/app");
-
-/***/ }),
-
-/***/ "firebase/auth":
-/*!********************************!*\
-  !*** external "firebase/auth" ***!
-  \********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("firebase/auth");
-
-/***/ }),
-
-/***/ "firebase/firestore":
-/*!*************************************!*\
-  !*** external "firebase/firestore" ***!
-  \*************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("firebase/firestore");
 
 /***/ }),
 

@@ -876,56 +876,9 @@ $export($export.S + $export.F, 'Object', { assign: __webpack_require__(/*! ./_ob
 
 /***/ }),
 
-/***/ "./components/Portal/Actions/index.js":
-/*!********************************************!*\
-  !*** ./components/Portal/Actions/index.js ***!
-  \********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _index_sass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.sass */ "./components/Portal/Actions/index.sass");
-/* harmony import */ var _index_sass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_index_sass__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/sloth/Web/gladney/adopted-portal/app/components/Portal/Actions/index.js";
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-/* harmony default export */ __webpack_exports__["default"] = (() => {
-  return __jsx("adpt-portal-actions", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 5
-    },
-    __self: undefined
-  }, __jsx("i", {
-    class: "fas fa-sign-out-alt",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 6
-    },
-    __self: undefined
-  }));
-});
-
-/***/ }),
-
-/***/ "./components/Portal/Actions/index.sass":
-/*!**********************************************!*\
-  !*** ./components/Portal/Actions/index.sass ***!
-  \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
-
-/***/ }),
-
-/***/ "./components/Portal/Menu/index.js":
+/***/ "./components/portal/Menu/index.js":
 /*!*****************************************!*\
-  !*** ./components/Portal/Menu/index.js ***!
+  !*** ./components/portal/Menu/index.js ***!
   \*****************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -934,7 +887,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/sloth/Web/gladney/adopted-portal/app/components/Portal/Menu/index.js";
+var _jsxFileName = "/Users/sloth/Web/gladney/adopted-portal/app/components/portal/Menu/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 let colors = ['sunrise', 'rose', 'navy', 'aqua', 'maize', 'teal'];
@@ -973,9 +926,9 @@ let colors = ['sunrise', 'rose', 'navy', 'aqua', 'maize', 'teal'];
 
 /***/ }),
 
-/***/ "./components/Portal/index.js":
+/***/ "./components/portal/index.js":
 /*!************************************!*\
-  !*** ./components/Portal/index.js ***!
+  !*** ./components/portal/index.js ***!
   \************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -992,14 +945,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/head */ "next/head");
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _Menu__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Menu */ "./components/Portal/Menu/index.js");
-/* harmony import */ var _Actions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Actions */ "./components/Portal/Actions/index.js");
-/* harmony import */ var _svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../svg */ "./components/svg.js");
-/* harmony import */ var _sass_portal_sass__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../sass/portal.sass */ "./sass/portal.sass");
-/* harmony import */ var _sass_portal_sass__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_sass_portal_sass__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _Menu__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Menu */ "./components/portal/Menu/index.js");
+/* harmony import */ var _svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../svg */ "./components/svg.js");
+/* harmony import */ var _sass_portal_sass__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../sass/portal.sass */ "./sass/portal.sass");
+/* harmony import */ var _sass_portal_sass__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_sass_portal_sass__WEBPACK_IMPORTED_MODULE_7__);
 
 
-var _jsxFileName = "/Users/sloth/Web/gladney/adopted-portal/app/components/Portal/index.js";
+var _jsxFileName = "/Users/sloth/Web/gladney/adopted-portal/app/components/portal/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
@@ -1011,96 +963,61 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 /* harmony default export */ __webpack_exports__["default"] = (({
   children
 }) => {
-  const settings = JSON.parse(localStorage.getItem('portalSettings') || '{"theme": "sunrise"}'),
-        toggleMenu = () => document.body.classList.toggle('menu-open'),
-        toggleTheme = color => {
-    let theme = color || settings.theme;
+  let {
+    0: loaded,
+    1: setLoaded
+  } = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false),
+      toggleMenu = () => document.body.classList.toggle('menu-open'),
+      toggleTheme = color => {
+    let settings = JSON.parse(localStorage.getItem('portalSettings') || '{"theme": "sunrise"}'),
+        theme = color || settings.theme;
     document.documentElement.className = theme ? theme + '-theme' : '';
     localStorage.setItem('portalSettings', _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1___default()(_babel_runtime_corejs2_core_js_object_assign__WEBPACK_IMPORTED_MODULE_0___default()(settings, {
       theme: theme
     })));
   };
 
-  toggleTheme();
-  return __jsx("adpt-portal", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 22
-    },
-    __self: undefined
-  }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_4___default.a, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 23
-    },
-    __self: undefined
-  }, __jsx("title", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 24
-    },
-    __self: undefined
-  }, 'AdoptED Online Learning Portal' || false)), __jsx("menu", {
-    onClick: toggleMenu,
+  Object(react__WEBPACK_IMPORTED_MODULE_2__["useEffect"])(() => {
+    setLoaded(true);
+    toggleTheme();
+  }, []);
+  if (!loaded) return null;else return __jsx("adpt-portal", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 26
     },
     __self: undefined
-  }, __jsx(_Menu__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    toggleTheme: toggleTheme,
+  }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_4___default.a, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 27
     },
     __self: undefined
-  })), __jsx("header", {
+  }, __jsx("title", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 28
     },
     __self: undefined
-  }, __jsx("div", {
-    className: "adpt-mobile-menu",
-    onClick: toggleMenu,
+  }, 'AdoptED Online Learning Portal' || false)), __jsx("header", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 33
     },
     __self: undefined
-  }, __jsx("div", {
-    className: "adpt-mobile-menu-icon",
+  }, __jsx("adpt-logo", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 39
     },
     __self: undefined
-  }, __jsx("div", {
-    className: "adpt-mobile-menu-icon-lines",
+  }, __jsx(_svg__WEBPACK_IMPORTED_MODULE_6__["default"].AdptLogo, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 40
     },
     __self: undefined
-  }))), __jsx("adpt-logo", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 35
-    },
-    __self: undefined
-  }, __jsx(_svg__WEBPACK_IMPORTED_MODULE_7__["default"].AdptLogo, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 36
-    },
-    __self: undefined
-  })), __jsx(_Actions__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 38
-    },
-    __self: undefined
-  })), children);
+  }))), children);
 });
 
 /***/ }),
@@ -8449,9 +8366,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/router */ "next/router");
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_Portal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Portal */ "./components/Portal/index.js");
-/* harmony import */ var _utilities_firebase__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utilities/firebase */ "./utilities/firebase.js");
-/* harmony import */ var _utilities_functions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../utilities/functions */ "./utilities/functions.js");
+/* harmony import */ var _components_portal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/portal */ "./components/portal/index.js");
+/* harmony import */ var _utilities_functions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utilities/functions */ "./utilities/functions.js");
 var _jsxFileName = "/Users/sloth/Web/gladney/adopted-portal/app/pages/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -8459,47 +8375,22 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-
 const Dashboard = () => {
   const router = Object(next_router__WEBPACK_IMPORTED_MODULE_1__["useRouter"])();
-  return __jsx(_components_Portal__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  return __jsx(_components_portal__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 11
     },
     __self: undefined
   }, __jsx("main", {
     className: "dashboard",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 12
     },
     __self: undefined
   }));
-};
-
-Dashboard.getInitialProps = async ({
-  req,
-  res
-}) => {
-  /* const firebs = await fbapp.firestore().collection('/classSections')
-  let setNew = firebs.doc(adptKeygen()).set({
-  name: 'Kathy'
-  }).then(doc => {
-  console.log(doc)
-  }).catch(err => {
-  console.log(err)
-  }) */
-
-  /* let getNew = firebs.doc('x').get()
-  .then(doc => {
-  	console.log(doc)
-  }).catch(err => {
-  	console.log(err)
-  }) */
-  return {
-    stuff: ''
-  };
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Dashboard);
@@ -8514,37 +8405,6 @@ Dashboard.getInitialProps = async ({
 /***/ (function(module, exports) {
 
 
-
-/***/ }),
-
-/***/ "./utilities/firebase.js":
-/*!*******************************!*\
-  !*** ./utilities/firebase.js ***!
-  \*******************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! firebase/app */ "firebase/app");
-/* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(firebase_app__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var firebase_auth__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! firebase/auth */ "firebase/auth");
-/* harmony import */ var firebase_auth__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(firebase_auth__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var firebase_firestore__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! firebase/firestore */ "firebase/firestore");
-/* harmony import */ var firebase_firestore__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(firebase_firestore__WEBPACK_IMPORTED_MODULE_2__);
-
-
-
-const config = {
-  apiKey: "AIzaSyCsU_llsXDATmPwVgoI2y2LHtD08xHaFm0",
-  authDomain: "adopted-lms-portal.firebaseapp.com",
-  databaseURL: "https://adopted-lms-portal.firebaseio.com",
-  projectId: "adopted-lms-portal",
-  storageBucket: "adopted-lms-portal.appspot.com",
-  messagingSenderId: "459954911917",
-  appId: "1:459954911917:web:c5bb5d6cf75ad71f76a424"
-};
-/* harmony default export */ __webpack_exports__["default"] = (!firebase_app__WEBPACK_IMPORTED_MODULE_0___default.a.apps.length ? firebase_app__WEBPACK_IMPORTED_MODULE_0___default.a.initializeApp(config) : firebase_app__WEBPACK_IMPORTED_MODULE_0___default.a.app());
 
 /***/ }),
 
@@ -8582,39 +8442,6 @@ const isInViewport = (selector = 'x', top = 400) => {
 
 module.exports = __webpack_require__(/*! /Users/sloth/Web/gladney/adopted-portal/app/pages/index.js */"./pages/index.js");
 
-
-/***/ }),
-
-/***/ "firebase/app":
-/*!*******************************!*\
-  !*** external "firebase/app" ***!
-  \*******************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("firebase/app");
-
-/***/ }),
-
-/***/ "firebase/auth":
-/*!********************************!*\
-  !*** external "firebase/auth" ***!
-  \********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("firebase/auth");
-
-/***/ }),
-
-/***/ "firebase/firestore":
-/*!*************************************!*\
-  !*** external "firebase/firestore" ***!
-  \*************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("firebase/firestore");
 
 /***/ }),
 

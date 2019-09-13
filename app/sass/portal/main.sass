@@ -18,9 +18,9 @@ adpt-portal
         width: 100%
 
     menu
-        height: calc(100% - 3em)
+        height: calc(100% - #{$headerh})
         position: fixed
-        top: 3em
+        top: $headerh
         bottom: 0
         left: 0
         right: 0
@@ -78,7 +78,7 @@ adpt-portal
         position: relative
         z-index: 9999
         padding: 1em
-        height: 3rem
+        height: $headerh
         background-color: white()
         display: flex
         +z-depth-2
@@ -152,6 +152,6 @@ adpt-portal
                             transform: rotate(135deg)
 
     main
-        height: calc(100vh - 3em)
+        height: calc(100vh - #{$headerh})
         background-color: $sunrise
         +bgColorThemes

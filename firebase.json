@@ -16,5 +16,13 @@
   },
   "functions": {
     "source": "pFunctions"
+  },
+  "firestore": {
+    "rules": "firestore.rules"
+  },
+  "emulators": {
+    "firestore": {
+      "port": "PORT"
+    }
   }
 }
