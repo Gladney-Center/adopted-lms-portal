@@ -1,12 +1,4 @@
-const config = {
-    apiKey: "AIzaSyCsU_llsXDATmPwVgoI2y2LHtD08xHaFm0",
-    authDomain: "adopted-lms-portal.firebaseapp.com",
-    databaseURL: "https://adopted-lms-portal.firebaseio.com",
-    projectId: "adopted-lms-portal",
-    storageBucket: "adopted-lms-portal.appspot.com",
-    messagingSenderId: "459954911917",
-    appId: "1:459954911917:web:c5bb5d6cf75ad71f76a424"
-}
+import config from '../../config'
 
 class Firebase {
     constructor(app) {

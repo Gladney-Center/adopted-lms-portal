@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router'
 import Portal from '../components/portal'
+import SVG from '../components/svg'
 
 import { adptKeygen } from '../utilities/functions'
 
@@ -9,7 +10,9 @@ const Dashboard = () => {
 
 	return (
 		<Portal>
-			<main className="dashboard"></main>
+			<main className="dashboard">
+				<SVG.Search/>
+			</main>
 		</Portal>
 	)
 }
